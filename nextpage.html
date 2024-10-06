@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Assessment</title>
+    <link rel="stylesheet" href="styler.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Medical Assessment</h1>
+        <form action="nexp.html" method="GET">
+            <div class="question">
+                <label>Do you want to check for the following diseases?</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" class="select-all"> Select All</label>
+                    <label><input type="checkbox" name="disease" value="hepatitis_b"> Hepatitis B</label>
+                    <label><input type="checkbox" name="disease" value="hiv"> HIV</label>
+                    <label><input type="checkbox" name="disease" value="syphilis"> Syphilis</label>
+                    <label><input type="checkbox" name="disease" value="malaria"> Malaria</label>
+                    <label><input type="checkbox" name="disease" value="jaundice"> Jaundice</label>
+                </div>
+            </div>
+        <h3>Counseling</h3>
+        <p>Blood donation is a simple and safe way to save lives. Your donation can help accident victims, surgery
+            patients, and those with serious illnesses, as blood cannot be manufactured and relies entirely on
+            donors like you. The process takes about 10 minutes and uses sterile, disposable equipment, with
+            minimal discomfort. After donating, you’ll receive refreshments and should rest for a few minutes.
+            <br>
+            <br>
+            To donate, you must be in good health, between 18-65 years old, and weigh over 50 kg. Donating blood
+            helps maintain healthy iron levels, and each donation can save up to three lives. Side effects like mild
+            dizziness or bruising are rare and usually pass quickly with rest and hydration.
+            <br>
+            <br>
+            While blood donation is safe, some donors may experience minor side effects like dizziness or slight
+            bruising, which usually go away quickly with rest and hydration. We recommend avoiding heavy physical
+            activity for 24 hours after donating and drinking plenty of fluids to help your body recover.
+            <br>
+            <br>
+            By donating regularly, you provide a critical resource that helps your community. A single donation can
+            make a world of difference—be a part of the life-saving effort today!</p>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to handle "Select All" functionality
+        document.querySelector('.select-all').addEventListener('change', function() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(.select-all)');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = this.checked;
+            });
+        });
+    </script>
+</body>
+</html>
